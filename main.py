@@ -20,9 +20,8 @@ MAX_DURATION = 300  # 5 minutos en segundos
 
 # Inicializar FastAPI y la App de Telegram de forma asíncrona global
 app = FastAPI()
-ptb_app = ApplicationBuilder().token(TOKEN).build()
+ptb_app = ApplicationBuilder().token(TOKEN).updater(None).build()
 
-# 2. INTERFAZ DE USUARIO
 def menu_principal():
     keyboard = [
         [
